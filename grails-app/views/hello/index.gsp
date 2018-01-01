@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <g:each in="${(1..10)}" var="number">
+        ${number}<br/>
+    </g:each>
+
 Last Name:<g:fieldValue bean="${person}" field="lastName"/><br/>
 First Name: <g:fieldValue bean="${person}" field="firstName"/><br/>
 Age: <g:fieldValue bean="${person}" field="age"/><br/>
