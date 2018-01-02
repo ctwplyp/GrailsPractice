@@ -9,21 +9,21 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
+    <title>Render Domain</title>
 </head>
 
 <body>
-    <g:each in="${(1..10)}" var="number">
-        ${number}<br/>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <g:each in="${list}" var="person">
+        <tr>
+            <td>${person.lastName}, ${person.firstName}</td>
+            <td>${person.age}</td>
+        </tr>
     </g:each>
-
-Last Name:<g:fieldValue bean="${person}" field="lastName"/><br/>
-First Name: <g:fieldValue bean="${person}" field="firstName"/><br/>
-Age: <g:fieldValue bean="${person}" field="age"/><br/>
-
-Another way to do this
-Last Name of Hardcoded Person: ${person.lastName} <br/>
-First Name of Hardcoded Person: ${person.firstName} <br/>
-Age of Person of Hardcoded Person: ${person.age} <br/>
+</table>
 </body>
 </html>
