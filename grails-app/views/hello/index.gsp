@@ -9,20 +9,20 @@
 <html>
 <head>
     <meta name="layout" content="test"/>
-    <title>I am a test page</title>
+    <title>Persons</title>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 </head>
 
 <body>
-<p>The quick brown fox jumps over the lazy dog.</p>
+<p>These are the people.</p>
 <table>
     <tr>
         <td>Name</td>
         <td>Age</td>
     </tr>
-    <g:each in="${list}" var="person">
+    <g:each in="${persons}" var="person" status="i">
         <tr>
-            <td>${person.lastName}, ${person.firstName}</td>
+            <td>${i+1}. ${person.lastName}, ${person.firstName}</td>
             <td>${person.age}</td>
         </tr>
     </g:each>
