@@ -8,7 +8,7 @@ class HelloController {
     }
 
     def hi() {
-        render (view: 'index.gsp')
+        render (view: 'form.gsp')
     }
 
     def displayForm() {
