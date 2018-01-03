@@ -4,5 +4,10 @@ class Person {
 
     String firstName
     String lastName
-    int age
+    Date dateOfBirth
+    static constraints = {
+        firstName (blank: false)
+        lastName (blank: false )
+        dateOfBirth (blank: false)
+    }
 }
