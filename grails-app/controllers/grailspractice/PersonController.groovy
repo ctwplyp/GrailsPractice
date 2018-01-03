@@ -1,13 +1,16 @@
 package grailspractice
 
 class PersonController {
+    def index(){
+        
+    }
     def form(){
 
     }
 
     def save(){
-        def person5 = new Person(params)
-        person5.save()
+        def person = new Person(params)
+        person.save()
         render "Success!"
     }
 
